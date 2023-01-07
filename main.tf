@@ -53,20 +53,5 @@ resource "aws_instance" "MyInstance"{
     subnet_id = aws_subnet.some_public_subnet.id
     vpc_security_group_ids = "${aws_security_group.allow_tls.id}"
     
-    # provisioner "remote-exec" {
-      
-    #   inline = [
-    #   "sudo amazon-linux-extras install -y nginx1.12",
-    #   "sudo systemctl start nginx",
-    #   "echo 'Hello Master'"
-    #   ]
-      
-    #   connection {
-    #   type = "ssh"
-    #   user = "ubuntu"
-    #   private_key = file("./mykeypair")
-    #   host = self.public_ip
-    #   }
-    # }
-    
+   
 }
