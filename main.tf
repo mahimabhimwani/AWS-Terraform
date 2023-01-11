@@ -51,7 +51,7 @@ resource "aws_instance" "MyInstance"{
     key_name      = "Mahima-keypair"
     
     subnet_id = aws_subnet.some_public_subnet.id
-    vpc_security_group_ids = "${aws_security_group.allow_tls.id}"
+    vpc_security_group_ids = [aws_security_group.allow_tls.id]
     
    
 }
